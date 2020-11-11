@@ -4,27 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  </head>
   </head>
   <body>
-    <h1>Score Keeper app</h1>
-    <h2>
-      <span id="score1Display">0</span> To <span id="score2Display">0</span>
-    </h2>
+    <section class="section">
+      
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
 
-    <select name="" id="winningScoreSelect">
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-    <button id="p1Button">+1 player One</button>
-    <button id="p2Button">+1 player Two</button>
-    <button id="resetButton">Reset</button>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Score Keeper app
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <h2>
+                <span id="score1Display">0</span> To <span id="score2Display">0</span>
+              </h2>
+             
+              <div class ="control">
+                <label class="label is-inline is-size-4">Label</label>
+              <div class="select">
+                <select name="" id="winningScoreSelect" class ="is-focused">
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <button id="p1Button" class="is-primary button card-footer-item">+1 player One</button>
+    <button id="p2Button" class=" is-info button card-footer-item">+1 player Two</button>
+    <button id="resetButton"class="is-danger button card-footer-item">Reset</button>
+          </footer>
+        </div>
+        
+
+
+  </div>
+</div>
+</div>
+</section>
     <script src="app.js"></script>
+
   </body>
 </html>
