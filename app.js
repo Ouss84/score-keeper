@@ -2,6 +2,7 @@ const p1Display = document.querySelector('#score1Display');
 const p2Display = document.querySelector('#score2Display');
 const button1 = document.querySelector('#p1Button');
 const button2 = document.querySelector('#p2Button');
+const reset = document.querySelector('#resetButton');
 let p1score = 0;
 let p2score = 0;
 let winningScore=5;
@@ -24,4 +25,12 @@ button2.addEventListener('click', () => {
          if (p2score === winningScore){
              isGameOver= true;
          }
+})
+
+reset.addEventListener('click', () => {
+    p1score = 0;
+    p2score = 0;
+    isGameOver = false;
+    p1Display.textContent= 0;
+    p2Display.textContent= 0;
 })
