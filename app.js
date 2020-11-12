@@ -1,3 +1,4 @@
+//Defining the UI Variables
 const p1Display = document.querySelector('#score1Display');
 const p2Display = document.querySelector('#score2Display');
 const button1 = document.querySelector('#p1Button');
@@ -5,11 +6,13 @@ const button2 = document.querySelector('#p2Button');
 const reset = document.querySelector('#resetButton');
 const selectedWinningScore = document.querySelector('#winningScoreSelect');
 
+//Initializing the scores 
 let p1score = 0;
 let p2score = 0;
 let winningScore =2;
 let isGameOver = false;
 
+// Programing the Player One button 
 button1.addEventListener('click', () => {
     if(!isGameOver){
    p1score += 1;
@@ -23,6 +26,8 @@ button1.addEventListener('click', () => {
         button2.disabled = true;
     }
 })
+
+// Programing the Player Two button 
 button2.addEventListener('click', () => {
     if(!isGameOver){
         p2score += 1;
@@ -37,6 +42,7 @@ button2.addEventListener('click', () => {
          }
 })
 
+// Defining the reset function
 function resetScore () {
     p1score = 0;
     p2score = 0;
@@ -50,8 +56,10 @@ function resetScore () {
     
     
 }
+// Programing the reset button
 reset.addEventListener('click', resetScore);
 
+//Programing the selection scroll down
 selectedWinningScore.addEventListener('change', () =>{
     winningScore = parseInt(selectedWinningScore.value);
     resetScore();
